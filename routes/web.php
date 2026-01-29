@@ -10,8 +10,8 @@ use App\Http\Controllers\NotificationController;
 use Illuminate\Support\Facades\Route;
 
 // PUBLIC ROUTES
-Route::get('/', [HomeController::class, 'landing']);
-Route::get('/home', [HomeController::class, 'index'])->name('homepage');
+
+Route::get('/', [HomeController::class, 'index'])->name('homepage');
 Route::get('/contacts', [ContactController::class, 'show'])->name('contact.show');
 Route::post('/contacts', [ContactController::class, 'store'])->name('contact.store');
 Route::view('/help-center', 'helpcenter.index');
